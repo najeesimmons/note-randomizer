@@ -1,3 +1,22 @@
-button {
-  background-color: green;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#note-display {
+  height: 200px;
+  width: 200px;
+  font-size: 100px;
+  border: 2px solid black;
+}
+
+#start-button {
+  border-radius: 5;
+  max-width: 50px;
 }

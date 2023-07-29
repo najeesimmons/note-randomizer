@@ -4,7 +4,8 @@ const pickNote = () => {
   const index = Math.floor(Math.random() * (notes.length - 1));
   myNote = notes[index];
   console.log(myNote);
-  return myNote;
+  const noteDisplay = document.getElementById("note-display");
+  noteDisplay.innerText = myNote;
 };
 
 document.addEventListener("DOMContentLoaded", () => {
