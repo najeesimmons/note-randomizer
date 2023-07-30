@@ -16,9 +16,10 @@ const updateCountdown = () => {
   clock.innerText = `${minutes}:${seconds}`;
   time--;
   if (time < 0) {
-    //stop the setInterval whe time = 0 for avoid negative time
+    //stop the setInterval when time = 0 for avoid negative time
     clearInterval(timer);
     clearInterval(notePicker);
+    time = startingMinutes * 60;
   }
 };
 
