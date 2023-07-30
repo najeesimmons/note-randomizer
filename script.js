@@ -6,6 +6,8 @@ let time = startingMinutes * 60;
 const speed = 2000;
 let notePicker;
 let timer;
+let noteDisplay;
+let clock;
 
 const updateCountdown = () => {
   const minutes = Math.floor(time / 60);
@@ -17,7 +19,6 @@ const updateCountdown = () => {
 
 const pickNote = () => {
   let index = Math.floor(Math.random() * (notes.length - 1));
-  const noteDisplay = document.getElementById("note-display");
   myNote = notes[index];
   noteDisplay.innerText = myNote;
 };
@@ -30,14 +31,15 @@ const start = () => {
 const stop = () => {
   clearInterval(timer);
   clearInterval(notePicker);
-  const noteDisplay = document.getElementById("note-display");
   noteDisplay.innerText = "";
+  clock.innerText = "";
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   const startButton = document.getElementById("start-button");
   const stopButton = document.getElementById("stop-button");
-  const clock = document.getElementById("clock");
+  noteDisplay = document.getElementById("note-display");
+  clock = document.getElementById("clock");
   startButton.addEventListener("click", start);
   stopButton.addEventListener("click", stop);
 });
