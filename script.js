@@ -38,6 +38,7 @@ const stop = () => {
 document.addEventListener("DOMContentLoaded", () => {
   const startButton = document.getElementById("start-button");
   const stopButton = document.getElementById("stop-button");
+  // this seems to work when vars are declared at top of file and defined here
   noteDisplay = document.getElementById("note-display");
   clock = document.getElementById("clock");
   startButton.addEventListener("click", start);
