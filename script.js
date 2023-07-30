@@ -1,6 +1,6 @@
 const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 // duration of exercise
-let startingMinutes = 2;
+let startingMinutes = 1;
 let time = startingMinutes * 60;
 // time between random notes in milliseconds
 const speed = 2000;
@@ -15,6 +15,11 @@ const updateCountdown = () => {
   seconds = seconds < 10 ? "0" + seconds : seconds;
   clock.innerText = `${minutes}:${seconds}`;
   time--;
+  if (time < 0) {
+    //stop the setInterval whe time = 0 for avoid negative time
+    clearInterval(timer);
+    clearInterval(notePicker);
+  }
 };
 
 const pickNote = () => {
