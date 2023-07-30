@@ -2,22 +2,23 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 #note-display {
-  height: 275px;
-  width: 275px;
+  height: 300px;
+  width: 300px;
   font-size: 100px;
   border: 2px solid black;
-  line-height: 275px;
+  line-height: 300px;
   border-radius: 5px;
 }
 
 #button-container {
   display: flex;
-  justify-content: space-evenly;
+  margin: 0 auto;
   width: 275px;
+  justify-content: space-around;
 }
 
 #start-button {
@@ -43,4 +44,14 @@
   align-items: center;
   font-size: 20px;
   padding: 0;
+}
+
+#clock {
+  background-color: white;
+  border: 2px solid black;
+  height: 70px;
+  width: 200px;
+  margin: 20px auto 0;
+  font-size: 30px;
+  line-height: 70px;
 }
